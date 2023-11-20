@@ -101,7 +101,7 @@
                     <span t-field="o.scop_pediodo"/>
                 </div>
             </div>            
-
+<!-- VERSION ANTIGUA  -->
 <!--            <div class="row mt0 mb0">-->
 <!--                <div class="col-xs-3" style="font-size:19px">-->
 <!--                    <strong>Planta:</strong>-->
