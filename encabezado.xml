@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<t t-name="new_purchase_order_it.report_purchaseorder">
+        <t t-call="report.html_container">
+            <t t-as="o" t-foreach="docs">
+                
+
+                
+                
+                <div class="header">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <img t-if="o.company_id.logo" t-att-src="'data:image/png;base64,%s' % o.company_id.logo" style="max-height: 45px;"/>
+                        </div>
+                        <div class="col-xs-9 text-right" style="margin-top:20px; font-size:17px;" t-field="o.company_id.rml_header1"/>
+                    </div>
+                    <div class="row zero_min_height">
+                        <div class="col-xs-12">
+                            <div style="border-bottom: 1px solid black;"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6" name="company_address">
+                            <span t-field="o.company_id.partner_id"
+                                t-field-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}' 
+                                style="border-bottom: 1px solid black; display:inline-block; font-size:17px;"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <!--<t t-call="report.external_layout_header" />-->
+                <t t-call="new_purchase_order_it.report_purchaseorder_document" t-lang="o.partner_id.lang"/>
+            </t>
+        </t>
+    </t>
