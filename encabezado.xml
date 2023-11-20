@@ -2,10 +2,6 @@
 <t t-name="new_purchase_order_it.report_purchaseorder">
         <t t-call="report.html_container">
             <t t-as="o" t-foreach="docs">
-                
-
-                
-                
                 <div class="header">
                     <div class="row">
                         <div class="col-xs-3">
@@ -27,7 +23,6 @@
                         </div>
                     </div>
                 </div>
-                <!--<t t-call="report.external_layout_header" />-->
                 <t t-call="new_purchase_order_it.report_purchaseorder_document" t-lang="o.partner_id.lang"/>
             </t>
         </t>
